@@ -25,6 +25,13 @@ Gym.create(
     membership_price: 20
 )
 
+Gym.create(
+    name:'Planet Fitness',
+    location: 'NJ',
+    image_url: 'https://www.rrvunited.org/wp-content/uploads/sites/1004/2017/11/planet-fitness-logo.jpeg',
+    number_of_gyms: 55,
+    membership_price: 30
+)
 
 
 puts "✅ Done seeding!"
