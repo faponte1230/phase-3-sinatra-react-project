@@ -17,4 +17,14 @@ Gym.create(
     membership_price: 45
 )
 
+Gym.create(
+    name:'Crunch Fitness',
+    location: 'NYC',
+    image_url: 'https://appletondowntown.org/wp-content/uploads/2015/10/Crunch-Fitness-Logo-Blue.jpg',
+    number_of_gyms: 60,
+    membership_price: 20
+)
+
+
+
 puts "✅ Done seeding!"
