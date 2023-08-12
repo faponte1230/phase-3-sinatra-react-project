@@ -2,6 +2,8 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   # Add your routes here
+
+  #GYM ROUTES
   get "/gyms" do
     gyms = Gym.all
     gyms.to_json(include: :reviews)
@@ -37,6 +39,16 @@ class ApplicationController < Sinatra::Base
     gym.to_json
   end
 
-  
+  #REVIEW ROUTES
+  post '/gyms/:gym_id/reviews' do
+    review =  Review.create(
+      title: params[:title],
+      body: params[:body],
+      rating: params[:rating],
+      gym_id: params[:gym_id]
+    )
+    review.to_json
+  end
+
 
 end
