@@ -51,6 +51,13 @@ Review.create(
     gym_id: rand(1..4)
 )
 
+Review.create(
+    title: 'Not Ideal',
+    body: 'Half the workout machines have been out of order, for weeks.',
+    rating: 4,
+    gym_id: rand(1..4)
+)
+
 
 
 puts "✅ Done seeding!"
