@@ -30,4 +30,13 @@ class ApplicationController < Sinatra::Base
     )
     gym.to_json(include: :reviews)
   end
+
+  delete "/gyms/:id" do
+    gym = Gym.find(params[:id])
+    gym.destroy
+    gym.to_json
+  end
+
+  
+
 end
