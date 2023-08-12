@@ -4,10 +4,19 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
 
   #GYM ROUTES
+  get "/" do
+    gyms = Gym.all
+    gyms.to_json(include: :reviews)
+  end
+
   get "/gyms" do
     gyms = Gym.all
     gyms.to_json(include: :reviews)
-    
+  end
+
+  get "/gyms/:id" do
+    gym = Gym.find(params[:id])
+    gym.to_json(include: :reviews)
   end
 
   post "/gyms" do
@@ -40,6 +49,11 @@ class ApplicationController < Sinatra::Base
   end
 
   #REVIEW ROUTES
+  get "/reviews" do
+    reviews= Review.all
+    reviews.to_json
+  end
+
   post '/gyms/:gym_id/reviews' do
     review =  Review.create(
       title: params[:title],
