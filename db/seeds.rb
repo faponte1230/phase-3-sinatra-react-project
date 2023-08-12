@@ -1,6 +1,8 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
+
+#gym seeds
 Gym.create(
     name:'Retro Fitness',
     location: 'NYC',
@@ -33,5 +35,6 @@ Gym.create(
     membership_price: 30
 )
 
+#review seeds
 
 puts "✅ Done seeding!"
