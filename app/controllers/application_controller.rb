@@ -54,6 +54,11 @@ class ApplicationController < Sinatra::Base
     reviews.to_json
   end
 
+  get "/reviews/:id" do
+    gymReviews= Gym.find(params[:id])
+    gymReviews.to_json(include: :reviews)
+  end
+
   post '/gyms/:gym_id/reviews' do
     review =  Review.create(
       title: params[:title],
