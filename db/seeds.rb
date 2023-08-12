@@ -58,6 +58,12 @@ Review.create(
     gym_id: rand(1..4)
 )
 
+Review.create(
+    title: 'Ridiculous Policy',
+    body: 'You get asked to leave if you are too "aggresive" ie.grunting..',
+    rating: 1,
+    gym_id: rand(1..4)
+)
 
 
 puts "✅ Done seeding!"
