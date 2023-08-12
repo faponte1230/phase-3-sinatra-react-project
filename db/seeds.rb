@@ -9,5 +9,12 @@ Gym.create(
     membership_price: 30
 )
 
+Gym.create(
+    name:'LA Fitness',
+    location: 'NJ',
+    image_url: 'https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/022013/la_fitness_logo.png?itok=r9xabRCH',
+    number_of_gyms: 75,
+    membership_price: 45
+)
 
 puts "✅ Done seeding!"
