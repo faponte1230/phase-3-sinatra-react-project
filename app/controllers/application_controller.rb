@@ -19,4 +19,15 @@ class ApplicationController < Sinatra::Base
     gym.to_json(include: :reviews)
   end
 
+  patch "/gyms/:id" do
+    gym = Gym.find(params[:id])
+    gym.update(
+      name: params[:name],
+      location: params[:location],
+      image_url: params[:image_url],
+      number_of_gyms: params[:number_of_gyms],
+      membership_price: params[:membership_price]
+    )
+    gym.to_json(include: :reviews)
+  end
 end
