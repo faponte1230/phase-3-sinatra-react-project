@@ -37,4 +37,11 @@ Gym.create(
 
 #review seeds
 
+Review.create(
+    title: 'Great start',
+    body: 'Nice place if you are just starting out',
+    rating: 7,
+    gym_id: rand(1..4)
+)
+
 puts "✅ Done seeding!"
